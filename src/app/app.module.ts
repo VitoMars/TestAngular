@@ -17,6 +17,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { TrafficlightComponent } from './components/trafficlight/trafficlight.component';
+import { ChiediFelicitaComponent } from './components/chiedi-felicita/chiedi-felicita.component';
+import { RispondiFelicitaComponent } from './components/rispondi-felicita/rispondi-felicita.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { TrafficlightComponent } from './components/trafficlight/trafficlight.co
     // ProvaComponent,
     CardExampleComponent,
     TrafficlightComponent,
+    ChiediFelicitaComponent,
+    RispondiFelicitaComponent,
   ],
   imports: [
     BrowserModule,
