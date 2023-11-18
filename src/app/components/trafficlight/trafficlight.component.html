@@ -1,0 +1,11 @@
+<p>Il semaforo è: </p>
+<p>{{ light }}</p>
+<p>
+   Devi:
+   <ng-container [ngSwitch]="light">
+      <span *ngSwitchCase="'Verde'">ANDARE</span>
+      <span *ngSwitchCase="'Arancione'">RALLENTARE</span>
+      <span *ngSwitchCase="'Rosso'">FERMARTI</span>
+   </ng-container>
+</p>
+<button (click)="nextLight()">PROSSIMO SEMAFORO</button>

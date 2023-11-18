@@ -1,0 +1,11 @@
+<form class="example-form">
+   <mat-form-field class="example-full-width input">
+      <mat-label>Favorite pizza</mat-label>
+      <input matInput placeholder="Es. Italia" (input)="onInput($event)">
+   </mat-form-field>
+
+   <mat-list role="list" class="justify-center" *ngFor="let risultato of risultatoRicerca">
+      <mat-list-item role="listitem">{{risultato.nome}}</mat-list-item>
+      <p>{{risultato.prezzo.toFixed(2)}}€</p>
+   </mat-list>
+</form>
