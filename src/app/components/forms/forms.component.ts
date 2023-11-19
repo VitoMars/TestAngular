@@ -12,16 +12,17 @@ export class FormsComponent {
     username: new FormControl('', Validators.required),
     password: new FormControl('', [Validators.required, Validators.minLength(6)]),
     email: new FormControl('', [Validators.required, Validators.email]),
-    phoneNumber: new FormControl('', Validators.pattern('^[0-9]{9,10}$')),
+    phoneNumber: new FormControl('', [Validators.required, Validators.pattern('^[0-9]{9,10}$')]),
     customField: new FormControl('', [Validators.required, this.customValidator(5)])
   });
 
   customValidator(minLength: number) {
     return (control: FormControl): { [key: string]: any } | null => {
+
       const value: string = control.value;
   
       if (value.length < minLength) {
-        return { 'customFieldMinLength': { requiredLength: minLength, actualLength: value.length } };
+        return { 'customError': { requiredLength: minLength, actualLength: value.length } };
       }
   
       return null;

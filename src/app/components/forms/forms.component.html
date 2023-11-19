@@ -1,9 +1,11 @@
 <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
-
    <!-- Campo di input con validatore richiesto -->
    <div class="block">
-      <label for="username">Username:</label>
-      <input type="text" id="username" formControlName="username" />
+      <mat-form-field class="example-full-width">
+         <mat-label>Username:</mat-label>
+         <input matInput type="text" id="username" formControlName="username">
+      </mat-form-field>
+
       <div *ngIf="myForm.get('username')?.hasError('required')" class="error">
          Username è richiesto.
       </div>
@@ -11,39 +13,55 @@
 
    <!-- Campo di input con validatore di lunghezza -->
    <div class="block">
-      <label for="password">Password:</label>
-      <input type="password" id="password" formControlName="password" />
+      <mat-form-field class="example-full-width">
+         <mat-label>Password:</mat-label>
+         <input matInput type="password" id="password" formControlName="password">
+      </mat-form-field>
+
       <div *ngIf="myForm.get('password')?.hasError('minlength')" class="error">
          La password deve avere almeno 6 caratteri.
       </div>
    </div>
 
-   <!-- Campo di input con validatore di email -->
+   <!-- Campo di input con validatore email -->
    <div class="block">
-      <label for="email">Email:</label>
-      <input type="email" id="email" formControlName="email" />
+      <mat-form-field class="example-full-width">
+         <mat-label>Email:</mat-label>
+         <input matInput type="email" id="email" formControlName="email">
+      </mat-form-field>
+
       <div *ngIf="myForm.get('email')?.hasError('required') || myForm.get('email')?.hasError('email')" class="error">
          Inserisci un indirizzo mail valido.
       </div>
    </div>
 
    <!-- Campo di input con validatore di pattern -->
-   <label for="phoneNumber">Phone Number:</label>
-   <input type="text" id="phoneNumber" formControlName="phoneNumber" />
-   <div *ngIf="myForm.get('phoneNumber')?.hasError('pattern')" class="error">
-      Inserisci un numero di telefono corretto.
+   <div class="block">
+      <mat-form-field class="example-full-width">
+         <mat-label>Phone Number:</mat-label>
+         <input matInput type="text" id="phoneNumber" formControlName="phoneNumber">
+      </mat-form-field>
+
+      <div *ngIf="myForm.get('phoneNumber')?.hasError('pattern') || myForm.get('phoneNumber')?.hasError('required')"
+         class="error">
+         Inserisci un numero di telefono corretto.
+      </div>
    </div>
 
    <!-- Campo di input con validatore personalizzato -->
    <div class="block">
-      <label for="customField">Custom Field:</label>
-      <input type="text" id="customField" formControlName="customField" />
-      <div *ngIf="myForm.get('customField')?.hasError('customFieldMinLength')" class="error">
-         Questo campo deve avere almeno {{ myForm.get('customField')?.getError('customFieldMinLength').requiredLength }}
+      <mat-form-field class="example-full-width">
+         <mat-label>Custom Field:</mat-label>
+         <input matInput type="text" id="customField" formControlName="customField">
+      </mat-form-field>
+
+      <div *ngIf="myForm.get('customField')?.hasError('customError')" class="error">
+         Questo campo deve avere almeno {{ myForm.get('customField')?.getError('customError').requiredLength }}
          caratteri.
+         Hai inserito {{ myForm.get('customField')?.getError('customError').actualLength }} caratteri.
       </div>
    </div>
 
    <!-- Pulsante di invio -->
-   <button type="submit" [disabled]="myForm.invalid">Submit</button>
+   <button mat-raised-button color="primary" type="submit" [disabled]="myForm.invalid">Submit</button>
 </form>

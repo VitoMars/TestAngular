@@ -15,8 +15,6 @@ import { Pizza } from 'src/app/interfaces/generics-interfaces';
   selector: 'app-prova',
   templateUrl: './prova.component.html',
   styleUrls: ['./prova.component.scss'],
-  standalone: true,
-  imports: [CommonModule, FormsModule, MatFormFieldModule, MatInputModule, MatListModule],
 })
 export class ProvaComponent {
 
