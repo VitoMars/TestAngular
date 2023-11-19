@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { CardExampleComponent } from './components/card-example/card-example.component';
 import { TestLifecycleComponent } from './components/test-lifecycle/test-lifecycle.component';
@@ -24,6 +25,7 @@ import { UsersComponent } from './components/users/users.component';
 import { ChildComponent } from './components/child/child.component';
 import { ParentComponent } from './components/parent/parent.component';
 import { ScssComponent } from './components/scss/scss.component';
+import { FormsComponent } from './components/forms/forms.component';
 
 @NgModule({
   declarations: [
@@ -39,11 +41,13 @@ import { ScssComponent } from './components/scss/scss.component';
     ChildComponent,
     ParentComponent,
     ScssComponent,
+    FormsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     MatCardModule,
     MatIconModule,

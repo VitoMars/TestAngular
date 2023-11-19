@@ -10,6 +10,7 @@ import { ChiediFelicitaComponent } from './components/chiedi-felicita/chiedi-fel
 import { UsersComponent } from './components/users/users.component';
 import { ParentComponent } from './components/parent/parent.component';
 import { ScssComponent } from './components/scss/scss.component';
+import { FormsComponent } from './components/forms/forms.component';
 
 const routes: Routes = [
   { path: '', component: TestLifecycleComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'users', component: UsersComponent },
   { path: 'parent', component: ParentComponent },
   { path: 'scss', component: ScssComponent },
+  { path: 'forms', component: FormsComponent },
 ];
 
 @NgModule({
