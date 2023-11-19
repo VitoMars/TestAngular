@@ -58,6 +58,7 @@
       <div *ngIf="myForm.get('customField')?.hasError('customError')" class="error">
          Questo campo deve avere almeno {{ myForm.get('customField')?.getError('customError').requiredLength }}
          caratteri.
+         <br>
          Hai inserito {{ myForm.get('customField')?.getError('customError').actualLength }} caratteri.
       </div>
    </div>
