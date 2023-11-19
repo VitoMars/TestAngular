@@ -18,6 +18,8 @@ import { Pizza } from 'src/app/interfaces/generics-interfaces';
 })
 export class ProvaComponent {
 
+  inputRicerca: string = "";
+
   elencoPizze: Pizza[] = [
     { nome: "Margherita", prezzo: 3.00 },
     { nome: "Napoli", prezzo: 3.50 },
@@ -32,5 +34,8 @@ export class ProvaComponent {
     console.log(value);
 
     this.risultatoRicerca = this.elencoPizze.filter(pizza => pizza.nome.toLowerCase().includes(value));
+
+    // Alternativa
+    // this.risultatoRicerca = this.elencoPizze.filter(pizza => pizza.nome.toLowerCase().includes(this.inputRicerca.toLowerCase()));
   }
 }
