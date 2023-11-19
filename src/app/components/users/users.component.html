@@ -1,17 +1,29 @@
 <div *ngIf="userService.state$ | async as data">
-
    <div *ngIf="data.loading">
       Fetching users...
    </div>
    <div *ngIf="data.error">
       An error occured while fetching users
    </div>
-   <div *ngIf="data.users.length > 0">
-      <ul>
-         <li *ngFor="let user of data.users">
-            <img [src]="user.picture.thumbnail" alt="user" />
-            <p>{{ user.name.first }} {{ user.name.last }}</p>
-         </li>
-      </ul>
+   <div *ngIf="data.users.length > 0" class="flex">
+      <mat-card class="example-card" *ngFor="let user of data.users">
+         <mat-card-header>
+            <div mat-card-avatar style="background-image: url({{user.picture.thumbnail}})" class="example-header-image">
+            </div>
+            <!-- Esempio property binding -->
+            <mat-card-title>{{user.name.first}} {{user.name.last}}</mat-card-title>
+            <mat-card-subtitle>{{user.location.country}}</mat-card-subtitle>
+         </mat-card-header>
+         <img mat-card-image class="img" [src]="user.picture.large">
+         <!-- Alternativa -->
+         <!-- <img mat-card-image class="img" src={{user.picture.large}}> -->
+         <mat-card-content>
+            <p>Esempio descrizione</p>
+         </mat-card-content>
+         <mat-card-actions>
+            <button mat-button>LIKE</button>
+            <button mat-button>SHARE</button>
+         </mat-card-actions>
+      </mat-card>
    </div>
 </div>
