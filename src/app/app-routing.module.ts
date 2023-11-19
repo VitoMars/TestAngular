@@ -9,6 +9,7 @@ import { TrafficlightComponent } from './components/trafficlight/trafficlight.co
 import { ChiediFelicitaComponent } from './components/chiedi-felicita/chiedi-felicita.component';
 import { UsersComponent } from './components/users/users.component';
 import { ParentComponent } from './components/parent/parent.component';
+import { ScssComponent } from './components/scss/scss.component';
 
 const routes: Routes = [
   { path: '', component: TestLifecycleComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'chiedi-felicita', component: ChiediFelicitaComponent },
   { path: 'users', component: UsersComponent },
   { path: 'parent', component: ParentComponent },
+  { path: 'scss', component: ScssComponent },
 ];
 
 @NgModule({

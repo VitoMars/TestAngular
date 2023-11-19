@@ -23,6 +23,7 @@ import { RispondiFelicitaComponent } from './components/rispondi-felicita/rispon
 import { UsersComponent } from './components/users/users.component';
 import { ChildComponent } from './components/child/child.component';
 import { ParentComponent } from './components/parent/parent.component';
+import { ScssComponent } from './components/scss/scss.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { ParentComponent } from './components/parent/parent.component';
     UsersComponent,
     ChildComponent,
     ParentComponent,
+    ScssComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,32 @@
+// Variabili
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$tertiary-color: orange;
+
+// Nesting
+.my-component {
+  background-color: $primary-color;
+  padding: 20px;
+
+  // Selezione di un'istanza specifica della classe
+  &:hover {
+    background-color: $secondary-color;
+  }
+
+  // Utilizzo di un'ulteriore classe all'interno di .my-component
+  .nested-element {
+    font-size: 16px;
+    color: white;
+  }
+}
+
+// Mixins
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+// Utilizzo del mixin
+.my-other-component {
+  @include border-radius(10px);
+  background-color: $tertiary-color;
+}
