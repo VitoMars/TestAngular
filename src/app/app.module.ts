@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import { CardExampleComponent } from './components/card-example/card-example.component';
 import { TestLifecycleComponent } from './components/test-lifecycle/test-lifecycle.component';
@@ -19,6 +20,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { TrafficlightComponent } from './components/trafficlight/trafficlight.component';
 import { ChiediFelicitaComponent } from './components/chiedi-felicita/chiedi-felicita.component';
 import { RispondiFelicitaComponent } from './components/rispondi-felicita/rispondi-felicita.component';
+import { UsersComponent } from './components/users/users.component';
+import { ChildComponent } from './components/child/child.component';
+import { ParentComponent } from './components/parent/parent.component';
 
 @NgModule({
   declarations: [
@@ -30,10 +34,14 @@ import { RispondiFelicitaComponent } from './components/rispondi-felicita/rispon
     TrafficlightComponent,
     ChiediFelicitaComponent,
     RispondiFelicitaComponent,
+    UsersComponent,
+    ChildComponent,
+    ParentComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatCardModule,
     MatIconModule,

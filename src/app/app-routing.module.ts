@@ -7,6 +7,8 @@ import { TestLifecycleComponent } from './components/test-lifecycle/test-lifecyc
 import { ProvaComponent } from './components/prova/prova.component';
 import { TrafficlightComponent } from './components/trafficlight/trafficlight.component';
 import { ChiediFelicitaComponent } from './components/chiedi-felicita/chiedi-felicita.component';
+import { UsersComponent } from './components/users/users.component';
+import { ParentComponent } from './components/parent/parent.component';
 
 const routes: Routes = [
   { path: '', component: TestLifecycleComponent },
@@ -15,6 +17,8 @@ const routes: Routes = [
   { path: 'card-example', component: CardExampleComponent },
   { path: 'traffic-light', component: TrafficlightComponent },
   { path: 'chiedi-felicita', component: ChiediFelicitaComponent },
+  { path: 'users', component: UsersComponent },
+  { path: 'parent', component: ParentComponent },
 ];
 
 @NgModule({

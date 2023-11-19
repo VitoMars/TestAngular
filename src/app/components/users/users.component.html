@@ -1,0 +1,17 @@
+<div *ngIf="userService.state$ | async as data">
+
+   <div *ngIf="data.loading">
+      Fetching users...
+   </div>
+   <div *ngIf="data.error">
+      An error occured while fetching users
+   </div>
+   <div *ngIf="data.users.length > 0">
+      <ul>
+         <li *ngFor="let user of data.users">
+            <img [src]="user.picture.thumbnail" alt="user" />
+            <p>{{ user.name.first }} {{ user.name.last }}</p>
+         </li>
+      </ul>
+   </div>
+</div>

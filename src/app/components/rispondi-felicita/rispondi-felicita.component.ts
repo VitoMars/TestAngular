@@ -6,6 +6,6 @@ import { Component, Output, EventEmitter } from "@angular/core";
   styleUrls: ['./rispondi-felicita.component.scss']
 })
 export class RispondiFelicitaComponent {
-  @Output() yes = new EventEmitter<boolean>();
-  @Output() no = new EventEmitter<boolean>();
+  @Output() yes = new EventEmitter<void>();
+  @Output() no = new EventEmitter<void>();
 }

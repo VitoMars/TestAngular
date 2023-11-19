@@ -22,5 +22,7 @@ export class TrafficlightComponent {
     if (this.lightIndex >= TRAFFIC_LIGHTS.length) {
       this.lightIndex = 0;
     }
+
+    // this.light = TRAFFIC_LIGHTS[this.lightIndex];
   }
 }
